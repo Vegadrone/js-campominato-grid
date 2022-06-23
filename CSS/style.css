@@ -7,3 +7,26 @@
 body {
     background-color: #2b182b ;
 }
+
+.clear-fix::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+.cells-container {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+}
+
+.cell {
+    float: left;
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+.cells-container,
+.cell {
+    border: 3px solid white;
+}
