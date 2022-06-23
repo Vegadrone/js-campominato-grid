@@ -28,17 +28,23 @@
 
 const startGameBtn = document.getElementById('start-game-btn');
 const cellsWrapper = document.getElementById('cells-wrapper');
-let cellCreatedElement;
-function generateCells (){
-    for (let i = 1; i < 100 + 1; i++) {
-        let cellCreatedElement = document.createElement('div');
-        cellCreatedElement.classList.add('cell');
-        cellCreatedElement.innerHTML = i;
-        cellsWrapper.append(cellCreatedElement);
+
+
+startGameBtn.addEventListener("click", function(){
+    function generateCells() {
+        for (let i = 1; i < 100 + 1; i++) {
+            let cellCreatedElement = document.createElement('div');
+            cellCreatedElement.classList.add('cell');
+            cellCreatedElement.innerHTML = [i];
+            cellsWrapper.append(cellCreatedElement);
+            registerEventListener(cellCreatedElement)
+        }
     }
-    console.log(cellCreatedElement)
+    generateCells() 
+});
+
+function registerEventListener(element) {
+    element.addEventListener('click', function() {
+    element.classList.toggle('active');
+    })
 }
-console.log(cellCreatedElement)
-
-
-generateCells()
