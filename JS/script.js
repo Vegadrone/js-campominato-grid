@@ -29,9 +29,13 @@
 const startGameBtn = document.getElementById('start-game-btn');
 const cellsWrapper = document.getElementById('cells-wrapper');
 
-for (let i = 0; i < 100; i++){
-    const cellCreatedElement = document.createElement ('div');
-    cellCreatedElement.classList.add('cell');
-    cellsWrapper.append(cellCreatedElement);
-    console.log(cellsWrapper);
+function generateCells (){
+    for (let i = 1; i < 100 + 1; i++) {
+        const cellCreatedElement = document.createElement('div');
+        cellCreatedElement.classList.add('cell');
+        cellCreatedElement.innerHTML = i;
+        cellsWrapper.append(cellCreatedElement);
+    }
 }
+
+generateCells()

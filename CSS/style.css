@@ -12,6 +12,7 @@ header {
 
 body {
     background-color: #2b182b;
+    font-family: sans-serif;
 }
 
 .clear-fix::after{
@@ -31,6 +32,11 @@ body {
     float: left;
     width: calc(100% / 10);
     height: calc(100% / 10);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .cells-container,
