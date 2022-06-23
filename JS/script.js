@@ -28,14 +28,17 @@
 
 const startGameBtn = document.getElementById('start-game-btn');
 const cellsWrapper = document.getElementById('cells-wrapper');
-
+let cellCreatedElement;
 function generateCells (){
     for (let i = 1; i < 100 + 1; i++) {
-        const cellCreatedElement = document.createElement('div');
+        let cellCreatedElement = document.createElement('div');
         cellCreatedElement.classList.add('cell');
         cellCreatedElement.innerHTML = i;
         cellsWrapper.append(cellCreatedElement);
     }
+    console.log(cellCreatedElement)
 }
+console.log(cellCreatedElement)
+
 
 generateCells()

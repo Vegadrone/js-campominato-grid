@@ -5,14 +5,15 @@
 }
 
 header {
-    background-color: #717269;
+    background-color:#aaaaaa;
     height: 100px;
 }
    
 
 body {
-    background-color: #2b182b;
-    font-family: sans-serif;
+    background-color: #89a40f;
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 .clear-fix::after{
@@ -32,14 +33,21 @@ body {
     float: left;
     width: calc(100% / 10);
     height: calc(100% / 10);
-    color: #fff;
+    color: #306230;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 .cells-container,
 .cell {
-    border: 1px solid white;
+    border: 2px solid #0f380f;
+}
+
+.active {
+    background-color: #306230;
+    color: #89a40f;
 }
