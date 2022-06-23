@@ -4,8 +4,14 @@
     padding: 0;
 }
 
+header {
+    background-color: #717269;
+    height: 100px;
+}
+   
+
 body {
-    background-color: #2b182b ;
+    background-color: #2b182b;
 }
 
 .clear-fix::after{
@@ -15,9 +21,10 @@ body {
 }
 
 .cells-container {
-    width: 800px;
-    height: 800px;
+    width: 700px;
+    height: 700px;
     margin: 0 auto;
+    margin-top: 50px;
 }
 
 .cell {
@@ -28,5 +35,5 @@ body {
 
 .cells-container,
 .cell {
-    border: 3px solid white;
+    border: 1px solid white;
 }

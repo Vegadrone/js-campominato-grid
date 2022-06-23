@@ -19,3 +19,19 @@
 
 //! ################################## ESERCIZIO ##################################
 
+/* quindi bisogna: fare in modo che la griglia sia generata al momento del click sul bottone
+    il che significa che qualsiasi azione andrà messa all'interno di un addeventlistner click
+    -creare dinamicamente le celle con una funzione.
+    -inserire le celle nell'HTML tramite proprietà append sul parent #cells-wrapper
+    - generare un numero progressivo da  0 a 99 o da 1 a 100 tramite ciclo for e inserirlo dentro gli elementi creati magari con una funzione? 
+    - con classlist.toggle dare ad ogni cella la possibilità di essere cliccata e poi essere ricliccata per far cambiare colore alla cella*/
+
+const startGameBtn = document.getElementById('start-game-btn');
+const cellsWrapper = document.getElementById('cells-wrapper');
+
+for (let i = 0; i < 100; i++){
+    const cellCreatedElement = document.createElement ('div');
+    cellCreatedElement.classList.add('cell');
+    cellsWrapper.append(cellCreatedElement);
+    console.log(cellsWrapper);
+}
