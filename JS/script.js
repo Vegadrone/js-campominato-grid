@@ -32,39 +32,42 @@ const difficultySelector = document.getElementById('difficulty-level').value;
 
 
 startGameBtn.addEventListener("click", function(){
-    function generateCells() {
-        cellsWrapper.innerHTML = '';
-        for (let i = 1; i < 100 + 1; i++) {
-            let cellCreatedElement = document.createElement('div');
-            cellCreatedElement.classList.add('cell', 'easy');
-            cellCreatedElement.innerHTML = [i];
-            cellsWrapper.append(cellCreatedElement);
-            registerEventListener(cellCreatedElement)
-            console.log(cellCreatedElement[i])
-        }
-        // } else if (difficultySelector === 'Medium') {
-        //     for (let i = 1; i < 81 + 1; i++) {
-        //         let cellCreatedElement = document.createElement('div');
-        //         cellCreatedElement.classList.add('cell', 'medium');
-        //         cellCreatedElement.innerHTML = [i];
-        //         cellsWrapper.append(cellCreatedElement);
-        //         registerEventListener(cellCreatedElement)
-        //     }
-        // } else if (difficultySelector === 'Hard') {
-        //     for (let i = 1; i < 49 + 1; i++) {
-        //         let cellCreatedElement = document.createElement('div');
-        //         cellCreatedElement.classList.add('cell', 'hard');
-        //         cellCreatedElement.innerHTML = [i];
-        //         cellsWrapper.append(cellCreatedElement);
-        //         registerEventListener(cellCreatedElement)
-        //     }
-        // }
-    }
     generateCells()
 });
+
+function generateCells() {
+    cellsWrapper.innerHTML = '';
+    for (let i = 1; i < 100 + 1; i++) {
+        let cellCreatedElement = document.createElement('div');
+        cellCreatedElement.classList.add('cell', 'easy');
+        cellCreatedElement.innerHTML = [i];
+        cellsWrapper.append(cellCreatedElement);
+        registerEventListener(cellCreatedElement);
+
+    }
+    // } if (difficultySelector === 'Medium') {
+    //     for (let i = 1; i < 81 + 1; i++) {
+    //         let cellCreatedElement = document.createElement('div');
+    //         cellCreatedElement.classList.add('cell', 'medium');
+    //         cellCreatedElement.innerHTML = [i];
+    //         cellsWrapper.append(cellCreatedElement);
+    //         registerEventListener(cellCreatedElement)
+    //     }
+    // } else if (difficultySelector === 'Hard') {
+    //     for (let i = 1; i < 49 + 1; i++) {
+    //         let cellCreatedElement = document.createElement('div');
+    //         cellCreatedElement.classList.add('cell', 'hard');
+    //         cellCreatedElement.innerHTML = [i];
+    //         cellsWrapper.append(cellCreatedElement);
+    //         registerEventListener(cellCreatedElement)
+    //     }
+    // }
+}
 
 function registerEventListener(element) {
     element.addEventListener('click', function() {
     element.classList.toggle('active');
+    console.log('Hai cliccato la casella con il numero' + ' ' + element.innerHTML);
+    
     })
 }

@@ -20,7 +20,7 @@ body {
     width: 1000px;
     height: 850px;
     margin: 0 auto;
-    border-radius: 25px 25px 100px 25px;
+    border-radius: 15px 15px 150px 15px;
     display: flex;
     align-items: center;
     box-shadow:0px 0px 5px 2px rgb(13, 14, 14);
@@ -91,13 +91,21 @@ h2 {
 .logo-bool-boy h1{
     position: absolute;
     top: 28px;
-    left: 75px; 
+    left: 75px;
+    background-color: #8e8c91;
+    padding: 11px;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0px 0px 5px 0px rgb(13, 14, 14);
 }
 
 .logo-bool-boy img{
     position: absolute;
-    top:20px;
+    top:28px;
     left:15px;
+    background-color: #8c2f5c;
+    padding: 5px;
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0px 0px 5px 0px rgb(13, 14, 14);
 }
 
 #start-game-btn{
