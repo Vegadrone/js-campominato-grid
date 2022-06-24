@@ -33,13 +33,15 @@ const difficultySelector = document.getElementById('difficulty-level').value;
 
 startGameBtn.addEventListener("click", function(){
     function generateCells() {
-            for (let i = 1; i < 100 + 1; i++) {
-                let cellCreatedElement = document.createElement('div');
-                cellCreatedElement.classList.add('cell', 'easy');
-                cellCreatedElement.innerHTML = [i];
-                cellsWrapper.append(cellCreatedElement);
-                registerEventListener(cellCreatedElement);
-            }
+        cellsWrapper.innerHTML = '';
+        for (let i = 1; i < 100 + 1; i++) {
+            let cellCreatedElement = document.createElement('div');
+            cellCreatedElement.classList.add('cell', 'easy');
+            cellCreatedElement.innerHTML = [i];
+            cellsWrapper.append(cellCreatedElement);
+            registerEventListener(cellCreatedElement)
+            console.log(cellCreatedElement[i])
+        }
         // } else if (difficultySelector === 'Medium') {
         //     for (let i = 1; i < 81 + 1; i++) {
         //         let cellCreatedElement = document.createElement('div');
@@ -49,7 +51,7 @@ startGameBtn.addEventListener("click", function(){
         //         registerEventListener(cellCreatedElement)
         //     }
         // } else if (difficultySelector === 'Hard') {
-        //     for (let i = 1; i < 64 + 1; i++) {
+        //     for (let i = 1; i < 49 + 1; i++) {
         //         let cellCreatedElement = document.createElement('div');
         //         cellCreatedElement.classList.add('cell', 'hard');
         //         cellCreatedElement.innerHTML = [i];

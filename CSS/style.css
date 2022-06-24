@@ -57,8 +57,8 @@ body {
 }
 
 .hard {
-    width: calc(100% / 8);
-    height: calc(100% / 8);
+    width: calc(100% / 7);
+    height: calc(100% / 7);
 }
 
 .cells-container,
